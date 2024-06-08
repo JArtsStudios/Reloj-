@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/icono.jpeg" type="image/icon">
+</head>
+<body>
+    <div id="splash">
+        <img src="img/logo.png" alt="Logo del Studio">
+        <h1>J Arts Studios</h1>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/service-worker.js')
+            .then(function(registration) {
+              console.log('Service Worker registrado con éxito:', registration.scope);
+            }).catch(function(error) {
+              console.log('Registro del Service Worker fallido:', error);
+            });
+        }
+      </script>
+</body>
+</html>

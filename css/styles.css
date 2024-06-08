@@ -1,0 +1,61 @@
+
+html {
+    scrollbar-width: none;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171c2d;
+    color: #fff; /* Texto blanco */
+    font-family: "Montserrat", sans-serif;
+}
+
+#splash {
+    text-align: center;
+}
+
+#splash img {
+    width: 200px; /* Ajusta el tamaño del logo según sea necesario */
+    height: auto;
+    animation: inicio 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 both;
+}
+
+
+@keyframes inicio {
+    0% {
+        opacity: 0;
+        scale: .2;
+        /* filter: blur(55px); */
+        transform: rotate(90deg) skew(-41deg, -45deg);
+    }
+
+    50% {
+        scale: 1;
+
+        /* filter: blur(1px); */
+        transform: rotate(0deg) skew(0deg, 0deg);
+    }
+
+    100% {
+
+        opacity: 1;
+        /* filter: blur(0); */
+    }
+}
+
+
+
+#splash h1 {
+    font-size: 45px ; 
+    animation: inicio 2s cubic-bezier(0.075, 0.82, 0.165, 1) 0s 1 both;
+    transform: translateY(-45px);
+}
+
+
+

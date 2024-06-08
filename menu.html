@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temporizadores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/menu.css">
+  <link rel="icon" href="img/icono.jpeg" type="image/icon">
+</head>
+<body>
+<header>
+   <div class="marco">
+    <h1>Lista de Temporizadores</h1>
+    <form id="timerForm">
+      <input type="text" id="timerName" placeholder="Nombre del Temporizador">
+      <input type="number" id="timerDuration" placeholder="Duración en minutos">
+      <button type="button" onclick="addTimer()">Agregar Temporizador</button>
+    </form>
+   </div>
+</header>
+  <ul id="timerList"></ul>
+
+
+
+  <script src="js/menu.js"></script>
+
+  <!-- Añadir esto en reloj.html y menu.html antes del cierre de la etiqueta </body> -->
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado con éxito:', registration.scope);
+        }).catch(function(error) {
+          console.log('Registro del Service Worker fallido:', error);
+        });
+    }
+  </script>
+  
+</body>
+</html>

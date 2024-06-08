@@ -1,0 +1,224 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: black;
+  }
+
+
+  #timerTitle {
+    color: #f9982f;
+    font-size: 15px;
+    transform: scale(6) translateY(10px);
+  }
+  
+  #timerDisplay {
+    font-size: 355px;
+    font-weight: 900;
+    margin: 20px 0;
+    color: #f0f0f0;
+    transition: .2s ease-in-out;
+    transform: scale(1.1) translateY(10px);
+  }
+  
+  #controls button {
+    background: #f9982f;
+    padding: 10px 15px;
+    border-radius: 50px;
+    border: none;
+    color: #f0f0f0;
+    transition: .3s ease-in-out;
+  }
+
+  #controls button:hover {
+    background: #eab56f;
+    padding: 10px 55px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #timerDisplay.warning {
+    color: red;
+  }
+
+
+
+
+
+
+
+  /* <<<<<<tablets>>>>> */
+
+
+
+  @media (max-width: 1590px) {
+    body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+      }
+    
+    
+      #timerTitle {
+        color: #f9982f;
+        font-size: 5px;
+        transform: scale(4) translateY(6px);
+      }
+      
+      #timerDisplay {
+        font-size: 295px;
+        font-weight: 900;
+        margin: 20px 0;
+        color: #f0f0f0;
+        transition: .2s ease-in-out;
+        transform: scale(1.1) translateY(10px);
+      }
+      
+      #controls button {
+        background: #f9982f;
+        padding: 10px 15px;
+        border-radius: 50px;
+        border: none;
+        color: #f0f0f0;
+        transition: .3s ease-in-out;
+      }
+    
+      #controls button:hover {
+        background: #eab56f;
+        padding: 10px 55px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #timerDisplay.warning {
+        color: red;
+      }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+  /* para telefonos xd  */
+
+@media (max-width: 890px) {
+    body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+      }
+    
+    
+      #timerTitle {
+        color: #f9982f;
+        font-size: 5px;
+        transform: scale(4) translateY(6px);
+      }
+      
+      #timerDisplay {
+        font-size: 205px;
+        font-weight: 900;
+        margin: 20px 0;
+        color: #f0f0f0;
+        transition: .2s ease-in-out;
+        transform: scale(1.1) translateY(10px);
+      }
+      
+      #controls button {
+        background: #f9982f;
+        padding: 10px 15px;
+        border-radius: 50px;
+        border: none;
+        color: #f0f0f0;
+        transition: .3s ease-in-out;
+      }
+    
+      #controls button:hover {
+        background: #eab56f;
+        padding: 10px 55px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #timerDisplay.warning {
+        color: red;
+      }
+    
+    
+}
+
+
+
+
+@media (max-width: 490px) {
+    body {
+        font-family: "Montserrat", sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: black;
+      }
+    
+    
+      #timerTitle {
+        color: #f9982f;
+        font-size: 5px;
+        transform: scale(4) translateY(6px);
+      }
+      
+      #timerDisplay {
+        font-size: 105px;
+        font-weight: 900;
+        margin: 20px 0;
+        color: #f0f0f0;
+        transition: .2s ease-in-out;
+        transform: scale(1.1) translateY(10px);
+      }
+      
+      #controls button {
+        background: #f9982f;
+        padding: 10px 15px;
+        border-radius: 50px;
+        border: none;
+        color: #f0f0f0;
+        transition: .3s ease-in-out;
+      }
+    
+      #controls button:hover {
+        background: #eab56f;
+        padding: 10px 55px;
+        border-radius: 50px;
+        border: none;
+        cursor: pointer;
+      }
+      
+      #timerDisplay.warning {
+        color: red;
+      }
+    
+    
+}
+  
+  

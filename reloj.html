@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reloj</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reloj.css">
+  <link rel="icon" href="img/icono.jpeg" type="image/icon">
+</head>
+<body>
+  <h1 id="timerTitle"></h1>
+  <div id="timerDisplay">00:00</div>
+  <div id="controls">
+    <button onclick="startTimer()">Iniciar</button>
+    <button onclick="pauseTimer()">Pausar</button>
+    <button onclick="nextTimer()">Siguiente</button>
+    <button onclick="previousTimer()">Anterior</button>
+    <button onclick="exitTimer()">Salir</button>
+  </div>
+  <script src="js/reloj.js"></script>
+  <!-- Añadir esto en reloj.html y menu.html antes del cierre de la etiqueta </body> -->
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(function(registration) {
+          console.log('Service Worker registrado con éxito:', registration.scope);
+        }).catch(function(error) {
+          console.log('Registro del Service Worker fallido:', error);
+        });
+    }
+  </script>
+  
+</body>
+</html>
