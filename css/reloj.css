@@ -16,12 +16,12 @@ body {
   }
   
   #timerDisplay {
-    font-size: 355px;
+       font-size: 495px;
     font-weight: 900;
     margin: 20px 0;
-    color: #f0f0f0;
+    color: #FFF;
     transition: .2s ease-in-out;
-    transform: scale(1.1) translateY(10px);
+    transform: scale(1) translateY(10px);
   }
   
   #controls button {
