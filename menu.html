@@ -27,17 +27,6 @@
 
   <script src="js/menu.js"></script>
 
-  <!-- Añadir esto en reloj.html y menu.html antes del cierre de la etiqueta </body> -->
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registrado con éxito:', registration.scope);
-        }).catch(function(error) {
-          console.log('Registro del Service Worker fallido:', error);
-        });
-    }
-  </script>
   
 </body>
 </html>

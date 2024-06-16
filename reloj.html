@@ -20,18 +20,9 @@
     <button onclick="previousTimer()">Anterior</button>
     <button onclick="exitTimer()">Salir</button>
   </div>
+  <div class="clock" id="clock"></div>
   <script src="js/reloj.js"></script>
-  <!-- Añadir esto en reloj.html y menu.html antes del cierre de la etiqueta </body> -->
-<script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registrado con éxito:', registration.scope);
-        }).catch(function(error) {
-          console.log('Registro del Service Worker fallido:', error);
-        });
-    }
-  </script>
+ 
   
 </body>
 </html>

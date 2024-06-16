@@ -17,7 +17,7 @@ function startTimer() {
 
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
-      alert("¡Tiempo terminado!");
+      
     }
   }, 1000);
 }
@@ -61,3 +61,25 @@ function updateDisplay() {
     timerDisplay.classList.remove("warning");
   }
 }
+
+
+
+
+
+
+function updateClock() {
+    const clockElement = document.getElementById('clock');
+    const now = new Date();
+    const options = {
+        timeZone: 'America/Tegucigalpa',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: true
+    };
+    const timeString = now.toLocaleTimeString('en-US', options);
+    clockElement.textContent = timeString;
+}
+
+setInterval(updateClock, 1000);
+updateClock();

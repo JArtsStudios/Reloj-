@@ -47,15 +47,34 @@ body {
 
 
 
+  .clock {
+    background: #000;
+    color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    text-align: center;
+    font-size: 2em;
+    animation: clock 0.5s ease-in-out 0s 1 both;
+    transition: .4s ease-in-out;
+}
 
-
-
+@keyframes clock {
+    0% {
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 
   /* <<<<<<tablets>>>>> */
 
 
 
-  @media (max-width: 1390px) {
+  @media (max-width: 1090px) {
     body {
         font-family: "Montserrat", sans-serif;
         display: flex;
