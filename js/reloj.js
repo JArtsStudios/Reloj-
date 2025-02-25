@@ -64,6 +64,17 @@ function updateDisplay() {
 
 
 
+function addFiveMinutes() {
+  timeRemaining += 300; // 5 minutos = 300 segundos
+  updateDisplay();
+}
+
+function subtractFiveMinutes() {
+  timeRemaining = Math.max(0, timeRemaining - 300); // Evita valores negativos
+  updateDisplay();
+}
+
+
 
 
 
