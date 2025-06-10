@@ -51,6 +51,7 @@ body {
     color: #e37239;
     padding: 10px 55px;
     border-radius: 50px;
+    outline: none;
     width: 25%;
     margin-bottom: 2%;
     transition: cubic-bezier(0.19, 1, 0.22, 1) .4s;
