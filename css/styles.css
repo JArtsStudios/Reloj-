@@ -11,7 +11,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #171c2d;
+    background-color: #000000;
     color: #fff; /* Texto blanco */
     font-family: "Montserrat", sans-serif;
 }
@@ -33,6 +33,7 @@ body, html {
         scale: .2;
         /* filter: blur(55px); */
         transform: rotate(90deg) skew(-41deg, -45deg);
+                filter: blur(70px) ;
     }
 
     50% {
@@ -40,6 +41,7 @@ body, html {
 
         /* filter: blur(1px); */
         transform: rotate(0deg) skew(0deg, 0deg);
+
     }
 
     100% {

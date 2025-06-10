@@ -27,29 +27,65 @@ body {
   }
   
   #controls button {
-    background: #f9982f;
+    background: #ffffff48;
+    border-top: solid #f0f0f0 2px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     padding: 10px 15px;
     border-radius: 50px;
-    border: none;
     color: #f0f0f0;
+    transform: perspective(100px) rotateX(-40deg) rotateY(0deg);
     transition: .3s ease-in-out;
-    transform: translateY(-50px);
-    animation: boton 0.5s ease-in-out 0s 1 both;
+    animation:  0.5s ease-in-out 0s 1 both;
   }
 
   #controls button:hover {
-    background: #eab56f;
+    background: #cccccc;
     padding: 10px 55px;
     border-radius: 50px;
-    border: none;
+    border-top: solid #f0f0f0 2px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
     cursor: pointer;
+    transform: perspective(300px) rotateX(0deg) rotateY(0deg);
+
+  }
+
+    #controls button:active {
+    background: #cccccc;
+    padding: 10px 55px;
+    border-radius: 50px;
+    border-top: solid #f0f0f0 2px;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    cursor: pointer;
+    filter: blur(5.4px);
+    transform: perspective(300px) rotateX(0deg) rotateY(0deg);
 
   }
   
   #timerDisplay.warning {
-    color: red;
+      animation: parpadeoRojoBlanco 1s infinite;
   }
 
+
+    @keyframes parpadeoRojoBlanco {
+      0%, 100% {
+        color: #f13f3f;
+        text-shadow: red 1px 0 50px;
+        filter: blur(6.5px) brightness(2.5);
+        scale: 1.2;
+      }
+      50% {
+        color: white;
+                text-shadow: red 0px 0 0px;
+                        filter: blur(0px) brightness(1);
+                        scale: 1;
+      }
+    }
 
 
   .clock {

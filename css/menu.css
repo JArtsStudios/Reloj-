@@ -10,7 +10,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #171c2d;
+    background-color: #07181a;
   }
 
 
@@ -78,8 +78,10 @@ body {
     align-items: center;
     margin: 5px 0;
     padding: 15px;
-    background-color: #f0f0f0;
+    background-color: #f0f0f04b;
     border-radius: 50px;
+    border-top: solid 2px #e3e8eecb;
+    color: #e3e8ee;
     gap: 25px;
     transform: perspective(400px) rotateX(30deg) rotateY(0deg);
     transition: transform .5s ease-in-out;
@@ -88,7 +90,10 @@ body {
 
   li:hover {
     transform: perspective(400px) rotateX(0deg) rotateY(0deg);
-    background-color: #e3e8ee;
+    background-color: #f0f0f0de;
+    border-radius: 50px;
+    border-top: solid 2px #e3e8eecb;
+    color: #262f3a;
     button.delete-btn {
         background: #f9972fb9;
         backdrop-filter: blur(45px);
