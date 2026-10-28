@@ -1,32 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reloj</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reloj</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reloj.css">
-    <link rel="icon" href="img/Reloj-logo.png" type="image/icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/reloj.css">
+
+<link rel="icon" href="img/Reloj-logo.png" type="image/icon">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
 </head>
+
 <body>
+
+<div id="iframeContainer" style="display: none;">
+  <iframe id="timerIframe" src="" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+</div>
+
+<div id="timerContainer">
+
   <h1 id="timerTitle"></h1>
+
   <div id="timerDisplay">00:00</div>
+
   <div id="controls">
-    <button onclick="startTimer()">Iniciar</button>
-    <button onclick="pauseTimer()">Pausar</button>
-    <button onclick="nextTimer()">Siguiente</button>
-    <button onclick="previousTimer()">Anterior</button>
-    <button onclick="exitTimer()">Salir</button>
-    <button onclick="addFiveMinutes()">+5 Min</button>
-    <button onclick="subtractFiveMinutes()">-5 Min</button>
+
+  <button id="startBtn" onclick="startTimer()">
+  <i class="bi bi-play-fill"></i>
+  </button>
+
+  <button id="pauseBtn" onclick="pauseTimer()">
+  <i class="bi bi-pause-fill"></i>
+  </button>
+
+  <button onclick="nextTimer()">
+  <i class="bi bi-skip-forward-fill"></i>
+  </button>
+
+  <button onclick="previousTimer()">
+  <i class="bi bi-skip-backward-fill"></i>
+  </button>
+
+  <button onclick="exitTimer()">
+  <i class="bi bi-x-lg"></i>
+  </button>
+
+  <button onclick="addFiveMinutes()">
+  <i class="bi bi-plus-circle"></i>
+  </button>
+
+  <button onclick="subtractFiveMinutes()">
+  <i class="bi bi-dash-circle"></i>
+  </button>
+
   </div>
-  
-  <h1>Hora Local Honduras </h1>
+
+  <h1 class="clock-title">Hora Local Honduras</h1>
+
   <div class="clock" id="clock"></div>
-  <script src="js/reloj.js"></script>
- 
-  
+
+</div>
+
+<div id="progressContainer">
+<div id="progressBar"></div>
+</div>
+
+<script src="js/reloj.js"></script>
+
 </body>
 </html>

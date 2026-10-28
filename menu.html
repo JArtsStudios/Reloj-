@@ -1,32 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Temporizadores</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Temporizadores</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/menu.css">
-    <link rel="icon" href="img/Reloj-logo.png" type="image/icon">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<link rel="stylesheet" href="css/menu.css">
+
+<link rel="icon" href="img/Reloj-logo.png">
+
 </head>
+
 <body>
+
 <header>
-   <div class="marco">
-    <h1>Lista de Temporizadores</h1>
-    <form id="timerForm">
-      <input type="text" id="timerName" placeholder="Nombre del Temporizador">
-      <input type="number" id="timerDuration" placeholder="Duración en minutos">
-      <button type="button" onclick="addTimer()">Agregar Temporizador</button>
-    </form>
-   </div>
+
+<div class="header-inner">
+
+<div class="title">
+
+<i class="bi bi-stopwatch"></i>
+<h1>Temporizadores</h1>
+
+</div>
+
+<button id="themeToggle">
+<i class="bi bi-moon"></i>
+</button>
+
+</div>
+
 </header>
-  <ul id="timerList"></ul>
 
+<main>
 
+<section class="panel create-panel">
 
-  <script src="js/menu.js"></script>
+<h2>
+<i class="bi bi-plus-circle"></i>
+Crear Temporizador
+</h2>
 
-  
+<form id="timerForm">
+
+<input type="text" id="timerName" placeholder="Nombre">
+
+<input type="number" id="timerDuration" placeholder="Minutos">
+
+<div class="iframe-option-group">
+  <label class="toggle-container">
+    <input type="checkbox" id="timerHasIframe" onchange="toggleIframeInput()">
+    <span class="toggle-label"><i class="bi bi-tv-fill"></i> Incluir webviewer grande</span>
+  </label>
+
+  <input type="url" id="timerIframeUrl" placeholder="https://ejemplo.com/transmision" style="display: none;">
+</div>
+
+<button type="button" onclick="addTimer()">
+<i class="bi bi-check-lg"></i>
+Agregar
+</button>
+
+</form>
+
+</section>
+
+<section class="panel presets-panel">
+
+<h2>
+<i class="bi bi-lightning"></i>
+Presets Rápidos
+</h2>
+
+<p class="subtitle">
+Accesos rápidos para temporizadores comunes
+</p>
+
+<div class="presets">
+
+<button onclick="quickAdd(1)">1 min</button>
+<button onclick="quickAdd(3)">3 min</button>
+<button onclick="quickAdd(5)">5 min</button>
+<button onclick="quickAdd(10)">10 min</button>
+<button onclick="quickAdd(15)">15 min</button>
+
+</div>
+
+</section>
+
+<section class="panel timers-panel">
+
+<h2>
+<i class="bi bi-list-ul"></i>
+Lista de Temporizadores
+</h2>
+
+<ul id="timerList"></ul>
+
+</section>
+
+</main>
+
+<!-- MODAL EDICIÓN -->
+<div id="editModal" class="modal">
+  <div class="modal-content">
+    <h3><i class="bi bi-pencil-square"></i> Editar Temporizador</h3>
+    
+    <label>Nombre:</label>
+    <input type="text" id="editTimerName">
+
+    <label>Duración (Minutos):</label>
+    <input type="number" id="editTimerDuration">
+
+    <label class="toggle-container" style="margin-top: 10px;">
+      <input type="checkbox" id="editHasIframe" onchange="toggleEditIframeInput()">
+      <span>Incluir webview grande</span>
+    </label>
+
+    <div id="editIframeContainer" style="display: none;">
+      <label>URL de la web:</label>
+      <input type="url" id="editIframeUrl" placeholder="https://ejemplo.com">
+    </div>
+
+    <div class="modal-buttons">
+      <button onclick="saveEditTimer()" class="btn-save"><i class="bi bi-check-lg"></i> Guardar</button>
+      <button onclick="closeEditModal()" class="btn-cancel"><i class="bi bi-x-lg"></i> Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<footer><p>Developed by <a href="https://jartsstudios.com/">J Arts Studios</a> for churches</p></footer>
+<script src="js/menu.js"></script>
+
 </body>
+
 </html>
